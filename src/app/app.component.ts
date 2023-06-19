@@ -9,7 +9,8 @@ import { HousingLocation } from './housing-location';
 export class AppComponent {
   title = 'fairhouse';
 
-  //create an array of type housing-location
+  //create an array of type housing-location (remember the interface we created)
+  //we are sharing this data to other parts of the app (Parent -> child) using the @input
   housingLocationList: HousingLocation[] = [
     {
       name: "Acme Fresh Start Housing",

@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HousingLocation } from '../housing-location';
 
 @Component({
-  selector: 'app-housing-list',
+  selector: 'app-housing-list', //secletor for the tag
   templateUrl: './housing-list.component.html',
   styleUrls: ['./housing-list.component.css']
 })

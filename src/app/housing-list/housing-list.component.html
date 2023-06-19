@@ -1,10 +1,19 @@
+<!-- everything in this file will be in the <app-housing-list> tag -->
 <label for="locatio-search">search for a new place</label>
 <input id="location-search" #search placeholder="Ex: Chicago">
 
-<!-- using a template varible to access user input -->
+<!-- above this line -->
+<!-- using # to declare template varibles -->
+<!-- using .value to acces the value of the template varible -->\
+<!-- below this line -->
+
+<!-- click event handler -->
+<!-- method has been declared in housing-list.components.ts -->
 <button (click)="searchHousingLocations(search.value)">Search</button>
 
+<!-- *ngFor lets us loop through elements of the results array -->
 <article *ngFor="let location of results">
+    <!-- accessing the array and using text interpolation {{}} to display the value -->
     <p>{{location.name}}</p>
     <p>{{location.city}}, {{location.state}}</p>
     <button (click)="selectHousingLocation(location)">View</button>

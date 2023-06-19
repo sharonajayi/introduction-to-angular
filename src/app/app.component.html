@@ -3,8 +3,10 @@
         <img src="../assets/logo.svg" alt="Fairhouse">Fairhouse
     </header>
     <section>
-        <app-housing-list [locationList]="housingLocationList"
-            (selectedLocationEvent)="updateSelectedLocation($event)"></app-housing-list>
+        <!-- using the housing-list selector tag -->
+        <!-- setting an attribute locationList and setting the value to housingLocationList which is the name of the array we made in app.components.ts -->
+        <app-housing-list [locationList]="housingLocationList" (selectedLocationEvent)="updateSelectedLocation($event)">
+        </app-housing-list>
     </section>
     <article>
         <ng-container *ngIf="selectedLocation">

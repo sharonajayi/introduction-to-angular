@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HousingListComponent } from './housing-list/housing-list.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ //components, directives and pipes go here
     AppComponent,
     HousingListComponent
   ],
@@ -13,6 +13,6 @@ import { HousingListComponent } from './housing-list/housing-list.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //define the root comppnent of module
 })
 export class AppModule { }
