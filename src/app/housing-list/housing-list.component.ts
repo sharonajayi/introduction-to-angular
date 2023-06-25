@@ -11,7 +11,7 @@ export class HousingListComponent implements OnInit {
   //sharing data between components
   //create an array and take data from another component(app.component.ts) to put into the array
   @Input() locationList: HousingLocation[] = [];//sharing data from the parent to the child 
-  results:HousingLocation[] =[];
+  results:HousingLocation[] =[]; //this array will hold the search result
   @Output() selectedLocationEvent = new EventEmitter<HousingLocation>();
 
   constructor() { }
@@ -29,6 +29,7 @@ export class HousingListComponent implements OnInit {
       )
   }
 
+  //emit an event with the location as the value
   selectHousingLocation(location: HousingLocation){
     this.selectedLocationEvent.emit(location);
   }
